@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+		input{
+			width: 50px;
+		}
+	</style>
+</head>
+<body>
+	<marquee>
+	<b>Kalkulator</b> </br>
+	<input type="number" class="input" id="1" /> 
+	<select id="operator">
+		<option value="add">+</option>
+		<option value="sub">-</option>
+		<option value="times">*</option>
+		<option value="divide">/</option>
+	</select>
+	<input type="number" class="input" id="2"/>
+	<button id="button" onclick="calc()">Hitung</button>
+	<input type="number" readonly/ id="3">
+
+	<script type="text/javascript">
+		function calc(){
+			var a = parseInt(document.getElementById("1").value); 
+			var b = parseInt(document.getElementById("2").value);
+			var c = document.getElementById("operator");
+			var opr = c.options[c.selectedIndex].value;
+			var result;
+			if(opr == "add"){
+				result = a+b;
+			}else if (opr =="sub"){
+				result = a-b;
+			}else if (opr == "times"){
+				result = a*b;
+			}else if (opr == "divide"){
+				result = a/b;
+			}
+
+			document.getElementById("3").value = result;
+		}
+	</script>
+</marquee>
+</body>
+</html>

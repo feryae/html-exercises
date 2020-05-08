@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<input id="textbox" type="text" />
+	<div id="output">replace me</div>
+	<button onclick="getValue()">Click me!</button>
+	<button onclick="changeText()">Click me too!</button> 
+</body>
+
+<script type="text/javascript">
+	function getValue() { //get the content of element
+  		var text = document.getElementById("textbox").value;
+  		var con = document.getElementById("output").innerHTML;
+  		alert("value: " + text + " & " + con);
+	}
+	function changeText() { //manipulating element
+  		//method 1: indirect, from returning object
+  		var sp1 = document.getElementById("output");
+  		sp1.innerHTML = "replaced! <br /> <button>New</button>";
+  		//method 2: direct assignment on object attribute
+  		document.getElementById("textbox").value = "Connie";
+	}		  	
+</script>
+</html>

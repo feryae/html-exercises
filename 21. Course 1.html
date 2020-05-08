@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Exercise 1.1.
+	</title>
+	<
+</head>
+<body>
+	<div id="textar" align="left" >
+  		This is some text!
+	</div>
+	<button onclick="textalignChange()" id="changer" value="OFF">Center</button> </br>
+	<button onclick="changebackColor()" id="toggle" value="OFF">Change</button>
+	<p id="change1"></p>
+	<script type="text/javascript">
+		var a = document.getElementById("textar").style.backgroundColor ;
+		var b = document.getElementById("textar").style.textAlign; 
+		function textalignChange(){
+			if(document.getElementById("changer").value=="OFF"){
+  				document.getElementById("changer").value="ON";
+  				document.getElementById("textar").style.textAlign = "right";
+  			}
+		  	else if(document.getElementById("changer").value=="ON"){
+			    document.getElementById("changer").value="OFF";
+			    document.getElementById("textar").style.textAlign = b;
+			}
+		}
+		function changebackColor(){
+			if(document.getElementById("toggle").value=="OFF"){
+  				document.getElementById("toggle").value="ON";
+  				document.getElementById("textar").style.backgroundColor = "Green";
+  			}
+		  	else if(document.getElementById("toggle").value=="ON"){
+			    document.getElementById("toggle").value="OFF";
+			    document.getElementById("textar").style.backgroundColor = a;
+			}
+		}
+	</script>
+</body>
+
+
+
+</html>
